@@ -47,6 +47,6 @@
     </config-file>
 
     <source-file src="src/android/am/armsoft/plugins/ListPicker.java" target-dir="src/am/armsoft/plugins" />
-    
+    <source-file src="src/android/am/armsoft/plugins/Notification.java" target-dir="src/am/armsoft/plugins" />
   </platform>
 </plugin>
