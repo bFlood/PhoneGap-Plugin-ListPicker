@@ -6,6 +6,7 @@
 // Copyright 2014 Robert Hovhannisyan. All rights reserved.
 // MIT Licensed
 var exec = require('cordova/exec');
+var platform = require('cordova/platform');
 
 var ListPicker = function() {}
 
@@ -35,4 +36,12 @@ ListPicker.prototype.showPicker = function(options, callback, error_callback) {
     };
     cordova.exec(_callback, _error_callback, 'ListPicker', 'showPicker', [config]);
 }
+
+
+ListPicker.prototype.alert = function(message, completeCallback, title, buttonLabel) {
+        var _title = (title || "Alert");
+        var _buttonLabel = (buttonLabel || "OK");
+        exec(completeCallback, null, "Notification", "alert", [message, _title, _buttonLabel]);
+}
+
 module.exports = new ListPicker();
