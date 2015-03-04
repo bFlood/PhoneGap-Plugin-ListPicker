@@ -41,9 +41,6 @@
       <feature name="ListPicker">
         <param name="android-package" value="am.armsoft.plugins.ListPicker" />
       </feature>
-      <feature name="Notification">
-        <param name="android-package" value="am.armsoft.plugins.Notification" />
-      </feature>
     </config-file>
 
     <source-file src="src/android/am/armsoft/plugins/ListPicker.java" target-dir="src/am/armsoft/plugins" />
