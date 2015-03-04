@@ -81,7 +81,7 @@ public class ListPicker extends CordovaPlugin {
         // Create and show the alert dialog
         Runnable runnable = new Runnable() {
             public void run() {
-                AlertDialog.Builder builder = new AlertDialog.Builder(cordova.getActivity(),  AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                AlertDialog.Builder builder = new AlertDialog.Builder(cordova.getActivity(),  AlertDialog.THEME_HOLO_LIGHT);
                 
                 // Set dialog properties
                 builder.setTitle(title);
