@@ -180,6 +180,8 @@ public class Notification extends CordovaPlugin {
                 });
 
                 //changeTextDirection(dlg);
+               dlg.create();
+               dlg.show();
             };
         };
         this.cordova.getActivity().runOnUiThread(runnable);
