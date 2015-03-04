@@ -39,9 +39,16 @@ ListPicker.prototype.showPicker = function(options, callback, error_callback) {
 
 
 ListPicker.prototype.alert = function(message, completeCallback, title, buttonLabel) {
-        var _title = (title || "Alert");
-        var _buttonLabel = (buttonLabel || "OK");
-        exec(completeCallback, null, "Notification", "alert", [message, _title, _buttonLabel]);
+    var scope = options.scope || null;
+    var _title = (title || "Alert");
+    var _buttonLabel = (buttonLabel || "OK");
+    var _callback = function() {
+        if(typeof callback == 'function') { 
+            callback.apply(scope, arguments);
+        }
+    };        
+    
+    cordova.exec(_callback, null, 'Notification', 'alert', [message, _title, _buttonLabel]);
 }
 
 module.exports = new ListPicker();
