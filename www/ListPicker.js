@@ -39,12 +39,12 @@ ListPicker.prototype.showPicker = function(options, callback, error_callback) {
 
 
 ListPicker.prototype.alert = function(message, completeCallback, title, buttonLabel) {
-    var scope = options.scope || null;
+    
     var _title = (title || "Alert");
     var _buttonLabel = (buttonLabel || "OK");
     var _callback = function() {
         if(typeof callback == 'function') { 
-            callback.apply(scope, arguments);
+            callback.apply(null, arguments);
         }
     };        
     
