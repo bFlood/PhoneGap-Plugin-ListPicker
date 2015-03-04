@@ -179,9 +179,8 @@ public class Notification extends CordovaPlugin {
                     }
                 });
 
-                //changeTextDirection(dlg);
-               dlg.create();
-               dlg.show();
+                changeTextDirection(dlg);
+
             };
         };
         this.cordova.getActivity().runOnUiThread(runnable);
